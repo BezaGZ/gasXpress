@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+    <title>GasXpress Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body class="bg-[#20CD8D] flex items-center justify-center min-h-screen">
+<h:form>
+    <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+            <i class="fas fa-gas-pump text-4xl text-black"></i>
+            <span class="text-4xl font-bold text-black ml-2">GasXpress</span>
+        </div>
+        <div class="bg-gray-900 p-10 rounded-lg shadow-lg relative w-96">
+            <h2 class="text-2xl font-bold text-green-200 mb-6">Iniciar Sesión</h2>
+            <div class="mb-4">
+                <div class="flex items-center bg-green-200 rounded-full p-4 mb-4 focus-within:ring-4 focus-within:ring-[#20CD8D]">
+                    <i class="fas fa-user text-gray-900 ml-2"></i>
+                    <span class="ui-float-label flex-1">
+                        <p:inputText id="float-input" class="bg-transparent text-gray-900 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#20CD8D] focus:border-transparent"
+                                     value="#{loginBean.username}" required="true" placeholder=" " />
+                        <p:outputLabel for="float-input" value="Usuario" class="text-gray-900" />
+                    </span>
+                </div>
+                <div class="flex items-center bg-green-200 rounded-full p-4 focus-within:ring-4 focus-within:ring-[#20CD8D]">
+                    <i class="fas fa-lock text-gray-900 ml-2"></i>
+                    <span class="ui-float-label flex-1">
+                        <p:password id="toggle" value="#{loginBean.password}" toggleMask="true" redisplay="true" required="true" class="bg-transparent text-gray-900 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#20CD8D] focus:border-transparent" placeholder=" " />
+                        <p:outputLabel for="toggle" value="Contraseña" class="text-gray-900" />
+                    </span>
+                </div>
+            </div>
+            <button class="bg-green-200 text-gray-900 font-bold py-2 px-10 rounded-full hover:bg-[#20CD8D]">
+                Iniciar sesión
+            </button>
+            <div class="absolute top-2 right-2">
+                <i class="fas fa-plus text-green-200"></i>
+            </div>
+        </div>
+    </div>
+</h:form>
+</body>
+</html>

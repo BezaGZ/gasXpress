@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+   <title>JSF Page</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+   <style>
+      .hoverable:hover {
+         background-color: #1a202c;
+      }
+   </style>
+</head>
+
+<body class="bg-[#20CD8D] flex flex-col min-h-screen">
+
+<header class="flex items-center justify-start mb-8 mt-4 px-4">
+   <i class="fas fa-gas-pump text-4xl text-black"></i>
+   <span class="text-4xl font-bold text-black ml-2">GasXpress</span>
+</header>
+
+<main class="flex-grow flex items-center justify-center">
+   <h:form>
+      <div class="grid grid-cols-3 gap-4 p-4 justify-center items-center">
+         <div class="bg-gray-900 text-white p-6 rounded-lg relative cursor-pointer flex flex-col items-start hoverable py-10" role="button" onclick="handleClickReportesLlenado()">
+            <i class="fas fa-chart-bar text-5xl mb-2"></i>
+            <span class="text-xl font-semibold mt-2">Reportes de llenado</span>
+            <i class="fas fa-plus absolute top-2 right-2 text-green-500"></i>
+         </div>
+         <div class="bg-gray-900 text-white p-6 rounded-lg relative cursor-pointer flex flex-col items-start hoverable py-10" role="button" onclick="handleClickReportesEvaporacion()">
+            <i class="fas fa-chart-bar text-5xl mb-2"></i>
+            <span class="text-xl font-semibold mt-2">Reportes de evaporación</span>
+            <i class="fas fa-plus absolute top-2 right-2 text-green-500"></i>
+         </div>
+         <div class="bg-gray-900 text-white p-6 rounded-lg relative cursor-pointer flex flex-col items-start hoverable py-10" role="button" onclick="handleClickSalir()">
+            <i class="fas fa-sign-out-alt text-5xl mb-2"></i>
+            <span class="text-xl font-semibold mt-2">Salir</span>
+            <i class="fas fa-plus absolute top-2 right-2 text-green-500"></i>
+         </div>
+      </div>
+   </h:form>
+</main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+    <title>JSF Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        /* Estilo para el hover */
+        .hoverable:hover {
+            background-color: #1a202c;
+        }
+
+        /* Asegurar el mismo tamaño para los tres divs */
+        .card-size {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .text-section {
+            align-self: flex-start;
+        }
+
+        .icon-section {
+            align-self: center;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Tamaño grande personalizado para el icono */
+        .icon-size-large {
+            font-size: 10rem; /* Ajustar tamaño */
+        }
+
+        /* Color personalizado */
+        .custom-color {
+            color: #CCF4E5; /* Aplicar el color personalizado */
+        }
+
+        /* Estilo para el botón fijo en la esquina inferior derecha */
+        .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100; /* Asegura que el botón quede sobre otros elementos */
+        }
+    </style>
+</head>
+
+<body class="bg-[#20CD8D] flex flex-col min-h-screen">
+<!-- Encabezado -->
+<header class="flex items-center justify-start mb-8 mt-4 px-4">
+    <i class="fas fa-gas-pump text-4xl text-black"></i>
+    <span class="text-4xl font-bold text-black ml-2">GasXpress - Cierres de Caja</span>
+</header>
+
+
+<main class="flex-grow flex items-center justify-center">
+    <h:form>
+
+        <div class="flex gap-4 p-4 justify-center items-center">
+
+
+            <div class="bg-gray-900 text-white p-6 rounded-lg relative cursor-pointer hoverable card-size" role="button" onclick="handleClickReportesLlenado()">
+                <div class="text-section">
+                    <span class="text-xl font-semibold custom-color">Reportes/día</span> <!-- Color del texto -->
+                </div>
+                <div class="icon-section">
+                    <i class="fas fa-table-list icon-size-large custom-color"></i> <!-- Color del icono -->
+                </div>
+            </div>
+
+
+            <div class="bg-gray-900 text-white p-6 rounded-lg relative cursor-pointer hoverable card-size" role="button" onclick="handleClickReportesEvaporacion()">
+                <div class="text-section">
+                    <span class="text-xl font-semibold custom-color">Reportes/semana</span>
+                </div>
+                <div class="icon-section">
+                    <i class="fas fa-table-list icon-size-large custom-color"></i>
+                </div>
+            </div>
+
+
+            <div class="bg-gray-900 text-white p-6 rounded-lg relative cursor-pointer hoverable card-size" role="button" onclick="handleClickReportesEvaporacion()">
+                <div class="text-section">
+                    <span class="text-xl font-semibold custom-color">Reporte/mes</span>
+                </div>
+                <div class="icon-section">
+                    <i class="fas fa-table-list icon-size-large custom-color"></i>
+                </div>
+            </div>
+
+        </div>
+    </h:form>
+</main>
+
+
+<div class="fixed-button">
+    <button class="bg-[#172627] text-[#20CD8D] font-bold py-2 px-10 rounded-full hover:bg-[#1a202c]">
+        Regresar
+    </button>
+</div>
+
+</body>
+</html>
